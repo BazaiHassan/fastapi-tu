@@ -1,32 +1,36 @@
+Here's the enhanced documentation with clear clone and run commands:
+
+```markdown
 # Expense Tracker API Documentation
 
 [![Maktabkhooneh Course](https://img.shields.io/badge/Maktabkhooneh-FastAPI%20Course-blue?logo=book)](https://maktabkhooneh.org/course/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%D8%B3%D8%B1%D9%88%DB%8C%D8%B3-fastapi-mk10645/)
 
-## Overview
-A simple REST API for tracking expenses built with FastAPI. This API allows you to create, read, update, and delete expense records.
+## Quick Start
 
-## Base URL
-`http://localhost:8000`
+### Clone the Repository
+```bash
+git clone https://github.com/BazaiHassan/fastapi-tu.git
+cd expense-tracker-api
+```
 
-## API Reference
-[Interactive Swagger UI](http://localhost:8000/docs) | 
-[Redoc Documentation](http://localhost:8000/redoc)
+### Install Dependencies
+```bash
+pip install -r requirements.txt
+```
 
-## Endpoints
+### Run the Server
+```bash
+fastapi dev core/main.py
+```
 
-### Get All Expenses
-- **URL**: `/expenses`
-- **Method**: `GET`
-- **Response**: 
-  - Status: `200 OK`
-  - Body: List of all expenses
+The API will be available at: `http://localhost:8000`
 
-### Add New Expense
-- **URL**: `/expenses`
-- **Method**: `POST`
-- **Body**:
-  ```json
-  {
-    "description": "string (min length 2)",
-    "amount": "integer"
-  }
+## API Endpoints
+
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/expenses` | GET | Get all expenses |
+| `/expenses` | POST | Add new expense |
+| `/expenses/{id}` | GET | Get single expense |
+| `/expenses/{id}` | PUT | Update expense |
+| `/expenses/{id}` | DELETE | Delete expense |
