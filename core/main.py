@@ -19,3 +19,5 @@ app.include_router(user_routes, prefix=settings.API_VERSION)
 app.include_router(expense_routes, prefix=settings.API_VERSION)
 app.include_router(category_routes, prefix=settings.API_VERSION)
 app.include_router(budget_routes, prefix=settings.API_VERSION)
+
+

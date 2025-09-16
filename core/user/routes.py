@@ -148,3 +148,4 @@ async def forget_password(email: str, background_tasks: BackgroundTasks, db: Ses
     )
     # we can add a method for sending email
     return {"reset_token": reset_token}
+

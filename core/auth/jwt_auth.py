@@ -8,7 +8,6 @@ from sqlalchemy.orm import Session
 from core.src.db import get_db
 from core.user import models
 from core.src.config import settings
-from sqlalchemy.dialects.postgresql import UUID
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 

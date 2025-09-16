@@ -2,7 +2,7 @@ from core.src.db import Base
 from sqlalchemy import Column, String, Boolean, DateTime, ForeignKey, Numeric
 from sqlalchemy.orm import relationship
 import uuid
-from sqlalchemy.dialects.postgresql import UUID
+# from sqlalchemy.dialects.postgresql import UUID  # You can remove this unused import
 from datetime import datetime
 
 class ExpenseModel(Base):
@@ -17,7 +17,8 @@ class ExpenseModel(Base):
     
     # Foreign keys
     user_id = Column(String, ForeignKey('users.id'), nullable=False, index=True)
-    category_id = Column(UUID(as_uuid=True), ForeignKey('categories.id'), nullable=False, index=True)
+    # FIX: Change from UUID to String to match categories.id
+    category_id = Column(String, ForeignKey('categories.id'), nullable=False, index=True)
     
     # Timestamps
     created_at = Column(DateTime, default=datetime.utcnow, nullable=False)

@@ -11,7 +11,7 @@ class BudgetModel(Base):
     id = Column(String, primary_key=True, default=uuid.uuid4, index=True, nullable=False)
     amount = Column(Numeric(10, 2), nullable=False)
     period = Column(String(20), nullable=False)
-    category_id = Column(UUID(as_uuid=True), ForeignKey('categories.id'), nullable=True)
+    category_id = Column(String, ForeignKey('categories.id'), nullable=True)
     start_date = Column(DateTime, nullable=False)
     end_date = Column(DateTime, nullable=False)
     created_at = Column(DateTime, default=datetime.utcnow, nullable=False)
