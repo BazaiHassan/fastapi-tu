@@ -1,0 +1,33 @@
+# Expense Tracker API Documentation
+
+[![Maktabkhooneh Course](https://img.shields.io/badge/Maktabkhooneh-FastAPI%20Course-blue?logo=book)](https://maktabkhooneh.org/course/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%D8%B3%D8%B1%D9%88%DB%8C%D8%B3-fastapi-mk10645/)
+
+## Quick Start
+
+### Clone the Repository
+```bash
+git clone https://github.com/BazaiHassan/fastapi-tu.git
+cd expense-tracker-api
+```
+
+### Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### Run the Server
+```bash
+fastapi dev core/main.py
+```
+
+The API will be available at: `http://localhost:8000`
+
+## API Endpoints
+
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/expenses` | GET | Get all expenses |
+| `/expenses` | POST | Add new expense |
+| `/expenses/{id}` | GET | Get single expense |
+| `/expenses/{id}` | PUT | Update expense |
+| `/expenses/{id}` | DELETE | Delete expense |
